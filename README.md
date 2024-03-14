@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-# aoaoms.com
-www.aoaoms.com
-=======
 # aoaoms
+
+这是 [aoaoms.com](www.aoaoms.com) 站点的源码
 
 This template should help get you started developing with Vue 3 in Vite.
 
@@ -31,10 +29,3 @@ npm run dev
 ```sh
 npm run build
 ```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
->>>>>>> ff315ef (first)
