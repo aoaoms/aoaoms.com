@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>还我漂漂拳</title>
+  <!-- use bootstrap -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.1/js/bootstrap.bundle.js"></script>
+  <!-- <link href="https://cdn.bootcdn.net/ajax/libs/bootstrap-icons/1.11.0/font/bootstrap-icons.min.css" rel="stylesheet"> -->
+
+  <!-- use user base css -->
+  <!-- <link href="/css/main.css" rel="stylesheet" type="text/css"> -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+  <!-- use typed js  https://www.npmjs.com/package/typed.js-->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.0/typed.min.js"></script> -->
+  <script src="https://cdn.bootcdn.net/ajax/libs/datejs/1.0/date.min.js"></script>
+
+  <!-- github markdown css -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/github-markdown-css/5.2.0/github-markdown.min.css" rel="stylesheet">
+  <!-- <link href="https://cdn.bootcdn.net/ajax/libs/github-markdown-css/5.2.0/github-markdown-light.min.css" rel="stylesheet">
+  <link href="https://cdn.bootcdn.net/ajax/libs/github-markdown-css/5.2.0/github-markdown-dark.min.css" rel="stylesheet"> -->
+  <!-- use prism theme vs css 代码高亮 -->
+  <!-- <link href="https://cdn.bootcdn.net/ajax/libs/prism-themes/1.9.0/prism-vs.min.css" rel="stylesheet"> -->
+  <link href="https://cdn.bootcdn.net/ajax/libs/prism-themes/1.9.0/prism-vsc-dark-plus.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+<style>
+  /* bootstrap var overwrite */
+  :root {
+    --bs-link-color: var(--bs-body-color);
+    --bs-link-color-rgb: var(--bs-body-color);
+    --bs-link-hover-color: var(--bs-body-color);
+  }
+
+  /* 这里更改markdown 文档配色与 bs 一致 */
+  .markdown-body {
+    /* 跟随bs */
+    --color-accent-fg: var(--bs-body-color);
+    /* 跟随bs */
+    --color-fg-default: var(--bs-body-color);
+    /* 影响表格背景色 这里继承自文档 跟随bs */
+    --color-canvas-default: inherit;
+    /* 影响表格颜色subtle色 */
+    --color-canvas-subtle: var(--bs-light-bg-subtle);
+  }
+
+  /* md文字提高间距 */
+  .markdown-body > p {
+    letter-spacing: 1px;
+  }
+
+  /* md 内图片使用了bs img-thumbnail 样式类, 当设置了dark color方才设置图片背景白色 */
+  @supports selector([data-bs-theme = "dark"]) {
+    .img-thumbnail {
+      background-color: #ffffff !important;
+    }
+  }
+
+
+  /* markdown-it-copy need */
+  pre {
+    position: relative;
+    overflow: auto;
+  }
+
+  .m-mdic-copy-wrapper {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .m-mdic-copy-wrapper span.u-mdic-copy-code_lang {
+    position: absolute;
+    top: 3px;
+    right: calc(100% + 4px);
+    font-family: system-ui;
+    font-size: 12px;
+    line-height: 18px;
+    color: #666;
+    opacity: 0.3;
+  }
+
+  .m-mdic-copy-wrapper div.u-mdic-copy-notify {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 3px 6px;
+    border: 0;
+    border-radius: 3px;
+    background: none;
+    font-family: system-ui;
+    font-size: 12px;
+    line-height: 18px;
+    color: #ffffff;
+    opacity: 0.3;
+    outline: none;
+    opacity: 1;
+    right: 100%;
+    padding-right: 4px;
+  }
+
+  .m-mdic-copy-wrapper button.u-mdic-copy-btn {
+    position: relative;
+    top: 0;
+    right: 0;
+    padding: 3px 6px;
+    border: 0;
+    border-radius: 3px;
+    background: none;
+    font-family: system-ui;
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff;
+    opacity: 0.3;
+    outline: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+
+  .m-mdic-copy-wrapper button.u-mdic-copy-btn:hover {
+    opacity: 1;
+  }
+</style>
+
+</html>

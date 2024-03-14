@@ -1,0 +1,37 @@
+.body-bg-image{
+    background-image: url("../image/iuliu-illes-M6c_PcgArFw-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left top;
+    background-attachment: fixed;
+}
+/* .body-bg-image::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100vw;
+    height: initial;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 0;
+} */
+
+/* 滚动条*/
+::-webkit-scrollbar-thumb {
+    /* border-radius: 8px !important; */
+    background: #dedddd !important;
+}
+
+/* 启用滚动样式 必须设置 */
+::-webkit-scrollbar {
+    height: 10px !important;
+    width: 12px !important;
+}
+
+
+.table-of-contents{
+    position: absolute;
+    float: left;
+}
